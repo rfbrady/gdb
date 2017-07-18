@@ -16,7 +16,7 @@ source = extract_source("http://www.allmusic.com/style/shoegaze-ma0000004454/alb
 soup = BeautifulSoup(source.content, 'html.parser')
 albums =soup.find_all(class_="info")
 
-with open("test.csv", "w") as out:
+with open("incompletedb.csv", "w", newline='') as out:
     header = ["Artist","Album"]
     writer = csv.writer(out)
     
